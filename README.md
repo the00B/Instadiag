@@ -9,8 +9,13 @@ Este concepto de Smart Health puede enfocarse desde dos frentes diferentes. Por 
 
 ![alt Pantalla principal](http://beta.instadiag.es/github/pantalla.png)
 
-## STACK NECESARIO
+## STACK NECESARIOPARA LA INSTALACIÓN.
 * Servidor Apache
 * PHP 7.4 o susperior
 * MariaDb 10.5.9 o superior
 * phpMyAdmin 5.02 o superior
+
+## PANTALLA PROYECTO FOC
+
+![alt Pantalla principal](http://beta.instadiag.es/github/Instadiag.png)
+
