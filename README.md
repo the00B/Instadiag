@@ -19,3 +19,12 @@ Este concepto de Smart Health puede enfocarse desde dos frentes diferentes. Por 
 
 ![alt Pantalla principal](http://beta.instadiag.es/github/Instadiag.png)
 
+## PANTALLA DE USUARIO
+
+
+![alt Pantalla principal](http://beta.instadiag.es/github/p1.png)
+
+## PANTALLA DE PREFERENCIAS
+
+
+![alt Pantalla principal](http://beta.instadiag.es/github/p2.png)
