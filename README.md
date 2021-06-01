@@ -8,3 +8,9 @@ La Smart Health podría traducirse como la salud inteligente. Un concepto que ha
 Este concepto de Smart Health puede enfocarse desde dos frentes diferentes. Por un lado, la tecnología nos permite simplificar los procesos y agilizar todo tipo de trámites. De esta manera, se reducen los costes y se produce una mejora de los servicios ofrecidos.
 
 ![alt Pantalla principal](http://beta.instadiag.es/github/pantalla.png)
+
+## STACK NECESARIO
+* Servidor Apache
+* PHP 7.4 o susperior
+* MariaDb 10.5.9 o superior
+* phpMyAdmin 5.02 o superior
