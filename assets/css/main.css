@@ -1,0 +1,928 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    background-color: #fafafa;
+}
+
+body.fondo {
+    background-color: #f6f6f6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    margin: 0;
+}
+
+
+/* ESTILOS GENERALES */
+
+:root {
+    --colorCeleste: #3897f0;
+    --blanco: #fff;
+    --colorBorder: #e6e6e6;
+}
+
+.errorMessage {
+    color: red;
+    font: 400 13px "Roboto";
+    text-align: center;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder,
+input[type="email"]::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+    font: 400 13px Arial;
+}
+
+.boton {
+    padding: 9px 9px;
+    background-color: var(--colorCeleste);
+    border: 1px solid var(--colorCeleste);
+    border-radius: 4px;
+    margin-top: 20px;
+    font: bold 13.333px Arial;
+    color: var(--blanco);
+    cursor: pointer;
+    outline: 0px;
+}
+
+.boton.follow {
+    background-color: var(--blanco);
+    border: 1px solid var(--colorBorder);
+    color: #262626;
+    font: bold 13.333px Arial;
+}
+
+
+/* CLOSE ESTILOS GENERALES */
+
+.contenedorPrincipal {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedorPrincipal img {
+    height: 620px;
+}
+
+.contenedorCards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 350px;
+    width: 100%;
+    height: auto;
+}
+
+.contenedorCards .card {
+    background-color: var(--blanco);
+    border: 1px solid var(--colorBorder);
+    border-radius: 4px;
+    padding: 20px 40px;
+    width: 100%;
+}
+
+.contenedorCards .card .title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contenedorCards .card .title h1 {
+    font-family: "Cookie";
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+
+.contenedorCards .card .title span {
+    font-size: 21px;
+    color: #999;
+    font-family: Arial;
+}
+
+.contenedorCards .card .formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario input[type="text"],
+.formulario input[type="password"] {
+    margin-bottom: 7px;
+    padding: 10px 8px;
+    font: 400 13.333px Arial;
+    background-color: var(--blanco);
+    border: 1px solid var(--colorBorder);
+    border-radius: 4px;
+}
+
+.contenedorCards .card .aviso {
+    text-align: center;
+    color: #999;
+    font: 400 14px Arial;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    padding: 0px 20px;
+}
+
+.contenedorCards .card.secundario {
+    width: 100%;
+    margin-top: 10px;
+    padding: 30px;
+    display: block;
+    text-align: center;
+}
+
+.contenedorCards .card.secundario p {
+    font: 400 13.333px Arial;
+}
+
+.contenedorCards .card.secundario p a {
+    text-decoration: none;
+    color: var(--colorCeleste);
+    font-weight: bold;
+}
+
+.contenedor {
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.barra {
+    background-color: var(--blanco);
+    width: 100%;
+    height: 77px;
+    line-height: 77px;
+    position: fixed;
+    z-index: 1;
+    border-bottom: 1px solid var(--colorBorder);
+    transition: all 350ms ease-in-out;
+}
+
+.barra .contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo h1 a {
+    font-family: "Cookie";
+    font-size: 35px;
+    text-decoration: none;
+    color: #262626;
+}
+
+.buscador {
+    display: flex;
+    align-items: center;
+}
+
+.buscador input[type="text"] {
+    padding: 8px 4px 8px 2px;
+    font: 400 13.333px Arial;
+    background-color: #fafafa;
+    border: 1px solid var(--colorBorder);
+    border-left: 0px;
+    border-radius: 0px 4px 4px 0px;
+    outline: 0px;
+}
+
+.buscador i {
+    padding: 10px 5px;
+    font-size: 11px;
+    color: #999;
+    border: 1px solid var(--colorBorder);
+    border-right: 0px;
+    border-radius: 4px 0px 0px 4px;
+}
+
+.opcionesBarra a {
+    color: rgba(0, 0, 0, 0.7);
+    text-decoration: none;
+    font: 400 24px Arial;
+    margin-left: 20px;
+}
+
+
+/* MASTER */
+
+.contenedorMaster {
+    width: 100%;
+    padding-top: 130px;
+}
+
+.contenedorMaster .contenedor {
+    display: flex;
+}
+
+
+/* UPLOAD */
+
+.contenedorUpload {
+    width: 100%;
+}
+
+.contenedorUpload form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedorUpload form input[type="text"] {
+    margin-bottom: 4px;
+    padding: 10px 8px;
+    font: 400 13.333px Arial;
+    background-color: #fafafa;
+    border: 1px solid var(--colorBorder);
+    border-radius: 4px;
+    margin: 15px 0px;
+}
+
+
+/* FEED */
+
+.feed {
+    max-width: 614px;
+    width: 100%;
+    margin-right: 28px;
+}
+
+.feed .cardFeed {
+    background-color: var(--blanco);
+    border: 1px solid var(--colorBorder);
+    border-radius: 3px;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
+    width: 100%;
+}
+
+.feed .headFeed {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+}
+
+.cardFeed .headFeed a {
+    text-decoration: none;
+}
+
+.cardFeed .headFeed .user {
+    display: flex;
+    align-items: center;
+}
+
+.cardFeed .headFeed .user span {
+    font: bold 13.333px "Roboto";
+    color: #262626;
+    margin-left: 16px;
+    letter-spacing: 0.4px;
+}
+
+.cardFeed .headFeed .user img {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.publicacion a {
+    color: #000;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.cardFeed .fotoFeed img {
+    width: 100%;
+}
+
+.cardFeed .controlsFeed {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 16px;
+}
+
+.cardFeed .controlsFeed .controlPrincipal button,
+.cardFeed .controlsFeed .controlSecundario button {
+    background-color: transparent;
+    border: none;
+    font-size: 22px;
+    color: #000;
+}
+
+.cardFeed .controlsFeed .controlPrincipal a {
+    font-size: 22px;
+    color: #000;
+    text-decoration: none;
+}
+
+.cardFeed .detailsFeed {
+    font: 400 14px "Roboto";
+    padding: 4px 16px;
+    letter-spacing: 0.3px;
+}
+
+.cardFeed .detailsFeed .likes {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.cardFeed .detailsFeed .description a,
+.cardFeed .detailsFeed .comments .comment a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #262626;
+}
+
+.cardFeed .detailsFeed .comments {
+    margin-bottom: 5px;
+}
+
+.cardFeed .detailsFeed .comments .comment {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cardFeed .detailsFeed .comments .comment div:last-child {
+    color: #999999;
+    font-size: 10px;
+    letter-spacing: 0.2px;
+}
+
+.cardFeed .detailsFeed .comments .commentsCount {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.cardFeed .detailsFeed .comments .commentsCount a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #999999;
+}
+
+.cardFeed .detailsFeed .comments .time {
+    margin-top: 5px;
+}
+
+.cardFeed .detailsFeed .comments .time span {
+    color: #999999;
+    font-size: 10px;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+}
+
+.cardFeed .respuesta {
+    width: 100%;
+    border-top: 1px solid #f6f6f6;
+    padding: 2px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cardFeed .respuesta input {
+    height: 60px;
+    width: 100%;
+    border: none;
+    font: 400 13.333px "Roboto";
+    outline: 0px;
+    color: #262626;
+}
+
+.cardFeed .respuesta input::placeholder {
+    font: 400 13.333px "Roboto";
+    color: #999999;
+}
+
+.cardFeed .respuesta button {
+    background-color: transparent;
+    color: var(--colorCeleste);
+    font: bold 13px "Roboto";
+    border: none;
+    outline: 0px;
+    cursor: pointer;
+    letter-spacing: 0.4px;
+}
+
+
+/* ASIDE */
+
+.aside {
+    max-width: 293px;
+    width: 100%;
+    height: 80vh;
+    position: sticky;
+    top: 80px;
+    font: 400 14px "Roboto";
+    letter-spacing: 0.3px;
+}
+
+.aside .user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.aside .user img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.aside .user .datos a {
+    color: #262626;
+    text-decoration: none;
+}
+
+.aside .user .datos span {
+    color: #999;
+}
+
+.aside .seguidos {
+    background-color: var(--blanco);
+    border-radius: 4px;
+    border: 1px solid var(--colorBorder);
+    padding-bottom: 10px;
+}
+
+.aside .seguidos .titleSeguido {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 16px;
+    margin-top: 12px;
+}
+
+.aside .seguidos .titleSeguido p {
+    font: bold 14px "Roboto";
+    color: #999999;
+    letter-spacing: 0.4px;
+}
+
+.aside .seguidos .userSeguidos {
+    width: 100%;
+    padding: 10px 0px 2px 16px;
+    max-width: 182px;
+    overflow: auto;
+}
+
+.aside .seguidos .userSeguidos .datosUserSeguidos {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.aside .seguidos .userSeguidos img {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.aside .seguidos .userSeguidos a {
+    font: bold 14px Arial;
+    color: #262626;
+    text-decoration: none;
+}
+
+.pieAside p {
+    margin-top: 10px;
+    padding: 4px 5px;
+    font: 400 11px "Roboto";
+    color: #999999;
+    letter-spacing: 0.4px;
+    text-align: center;
+}
+
+
+/*  Search */
+
+.contenedorCardsUsers {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    font: 400 13px "Roboto";
+    letter-spacing: 0.3px;
+}
+
+.contenedorCardsUsers .userCard {
+    background: var(--blanco);
+    border: 1px solid var(--colorBorder);
+    border-radius: 5px;
+    padding: 40px;
+    width: calc(20% - 14px);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedorCardsUsers .userCard img {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.contenedorCardsUsers .userCard h4 {
+    font-weight: bold;
+    color: #262626;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.contenedorCardsUsers .userCard span {
+    color: #999999;
+    font-size: 12px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+/* Profile */
+
+.contenedorMasterProfile {
+    width: 100%;
+    font: 400 13.33px "Roboto";
+    letter-spacing: 0.4px;
+}
+
+.contenedorMasterProfile .contenedorProfileUser {
+    display: flex;
+    height: auto;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.contenedorMasterProfile .contenedorProfileUser .photoProfile {
+    width: 360px;
+    padding-left: 100px;
+}
+
+.contenedorMasterProfile .contenedorProfileUser .photoProfile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.contenedorMasterProfile .contenedorProfileUser .detailsProfile {
+    width: 100%;
+}
+
+.contenedorMasterProfile .contenedorProfileUser .detailsProfile .usernameProfile {
+    display: flex;
+    align-items: center;
+}
+
+.contenedorMasterProfile .contenedorProfileUser .detailsProfile .usernameProfile h3 {
+    font-weight: 300;
+    font-size: 28px;
+    margin-right: 15px;
+}
+
+.controlsProfile a {
+    margin: 0;
+    font: 400 13.333px "Roboto" !important;
+    text-decoration: none;
+}
+
+.countProfile {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.countProfile div {
+    margin-right: 40px;
+}
+
+.descriptionProfile h1 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.descriptionProfile span {
+    font-weight: 300;
+    font-size: 16px;
+}
+
+
+/* pUBLICACIONES */
+
+.publicacionesProfile {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6em;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.publicaciones div {
+    width: 100%;
+}
+
+.publicacionesProfile div img {
+    width: 300px;
+    height: 300px;
+    object-position: center;
+    object-fit: cover;
+}
+
+.contenedorFotoProfile a {
+    position: relative;
+    display: block;
+}
+
+.contenedorFotoProfile a .datosFotoProfile {
+    display: none;
+    transition: all 10s ease-in-out;
+}
+
+.contenedorFotoProfile a:hover .datosFotoProfile {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 300px;
+    height: 300px;
+    color: var(--blanco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 400 18px "Roboto";
+}
+
+.datosFotoProfile span {
+    margin-right: 24px;
+}
+
+
+/* ESTILOS CONTENEDOR POST */
+
+.contenedorPost {
+    display: flex;
+    background-color: var(--blanco);
+    border: 1px solid var(--colorBorder);
+    width: 100%;
+    border-radius: 4px;
+}
+
+.fotoPost {
+    background-color: #f6f6f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fotoPost img {
+    height: auto;
+    width: auto;
+    max-width: 600px;
+    max-height: 600px;
+}
+
+.detailsPost {
+    width: 100%;
+}
+
+.titlePost {
+    display: flex;
+    padding: 10px 16px;
+    font: 400 14px "Roboto";
+    border-bottom: 1px solid #e6e6e6;
+    align-items: center;
+}
+
+.titlePost img {
+    margin-right: 15px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.titlePost a {
+    text-decoration: none;
+    color: #262626;
+}
+
+.titlePost p {
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 0.4px;
+    margin-bottom: 4px;
+}
+
+.comentariosPost {
+    width: 100%;
+    padding: 10px 16px 10px 25px;
+    height: 405px;
+    overflow: auto;
+    font: 400 14px "Roboto";
+}
+
+.comentarioPost {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.comentarioPost div {
+    display: flex;
+    flex-direction: column;
+}
+
+.comentarioPost div span:last-child {
+    font: 300 11px "Roboto";
+    color: #999999;
+}
+
+.comentarioPost a {
+    display: block;
+    text-decoration: none;
+    color: #262626;
+}
+
+.comentarioPost span {
+    width: 100%;
+}
+
+.comentarioPost img {
+    width: 28px;
+    border-radius: 50%;
+    margin-right: 10px;
+    height: 28px;
+    object-position: center;
+    object-fit: cover;
+}
+
+.piePost {
+    padding: 5px 16px;
+}
+
+.piePost button {
+    background-color: transparent;
+    border: none;
+    font-size: 22px;
+}
+
+.piePost p {
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 0.4px;
+    font-family: "Roboto";
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.piePost .respuesta {
+    width: 100%;
+    border-top: 1px solid #f6f6f6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.piePost .respuesta input {
+    height: 54px;
+    width: 100%;
+    border: none;
+    font: 400 13.333px "Roboto";
+    outline: 0px;
+    color: #262626;
+}
+
+.piePost .respuesta input::placeholder {
+    font: 400 13.333px "Roboto";
+    color: #999999;
+}
+
+.piePost .respuesta button {
+    background-color: transparent;
+    color: #3897f0;
+    font: bold 13px "Roboto";
+    border: none;
+    outline: 0px;
+    cursor: pointer;
+    letter-spacing: 0.4px;
+}
+
+.piePost .respuesta button:disabled {
+    color: #c9e3fb;
+}
+
+
+/*  ESTILOS SETTING */
+
+.contenedorSetting {
+    background-color: var(--blanco);
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    width: 95%;
+    margin: 0 auto;
+    padding: 10px 16px;
+    font: 400 14px "Roboto";
+    letter-spacing: 0.5px;
+}
+
+.settingHeader {
+    text-align: center;
+}
+
+.settingHeader img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.settingPhoto {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    margin: 12px auto;
+}
+
+.settingDatos {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.contenedorSetting input[type="text"],
+.contenedorSetting input[type="password"],
+.contenedorSetting input[type="email"],
+.contenedorSetting textarea {
+    margin-bottom: 7px;
+    padding: 10px 8px;
+    font: 400 13.333px Arial;
+    background-color: #fafafa;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.settingPassword {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+
+/* FOOT*/
+
+.foot {
+    width: 100%;
+    margin-top: 10px;
+    padding: 30px;
+    display: block;
+    text-align: center;
+    background-color: var(--blanco);
+    border: 1px solid var(--colorBorder);
+    border-radius: 4px;
+    font: 400 14px "Roboto";
+    letter-spacing: 0.5px;
+}
